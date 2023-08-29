@@ -1,0 +1,96 @@
+# 01 - HTML ✅
+
+# 02 - CSS ✅
+
+# 03 - FORM - HTML ✅
+
+# 04 - NEW NOTE ✅
+Usuario->Navegador: Ingresa a https://studies.cs.helsinki.fi/exampleapp/notes
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Servidor->Navegador: HTML-code (Página de notas)
+
+Usuario->Navegador: Escribe nueva nota en el campo de texto
+Usuario->Navegador: Hace clic en el botón "submit"
+
+Navegador->Navegador: Activación del evento "submit" en el formulario
+
+Navegador->Navegador: Captura el contenido del campo de texto
+
+Navegador->Navegador: Ejecuta el código JavaScript
+
+Navegador->Navegador: Genera una solicitud para enviar la nueva nota
+Navegador->Servidor: HTTP POST https://studies.cs.helsinki.fi/exampleapp/notes
+Navegador->Servidor: Datos de la nueva nota en el cuerpo de la solicitud
+
+Servidor->Servidor: Procesa la solicitud POST
+Servidor->Servidor: Almacena la nueva nota en la base de datos
+
+Servidor->Navegador: Respuesta al POST (puede ser un mensaje de éxito)
+
+Navegador->Navegador: Actualiza la vista de la página (puede ser una recarga)
+
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Servidor->Navegador: Datos JSON actualizados (incluyendo la nueva nota)
+
+Navegador->Navegador: Ejecuta el manejador de eventos
+Navegador->Navegador: Renderiza las notas actualizadas en la página
+
+Navegador->Navegador: Visualiza la nueva nota en la página
+
+# 05 - SPA ✅
+Usuario->Navegador: Ingresa a https://studies.cs.helsinki.fi/exampleapp/spa
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Servidor->Navegador: HTML-code (Página de la SPA)
+
+Navegador->Navegador: Descarga el archivo JavaScript principal (main.js) de la SPA
+Navegador->Navegador: Descarga el archivo de estilo CSS principal (main.css) de la SPA
+
+Navegador->Navegador: Carga y ejecuta el archivo JavaScript (main.js)
+
+Navegador->Navegador: Maneja las rutas de la SPA
+Navegador->Navegador: Cambia el contenido dinámicamente según la ruta
+
+Navegador->Servidor: Realiza peticiones AJAX para obtener datos según sea necesario
+Servidor->Navegador: Respuestas JSON con datos solicitados
+
+Navegador->Navegador: Renderiza dinámicamente los datos en la SPA
+
+Usuario->Navegador: Interactúa con la SPA (por ejemplo, crea notas, cambia vistas, etc.)
+
+Navegador->Servidor: Realiza solicitudes AJAX según las acciones del usuario
+
+Servidor->Navegador: Responde con datos relevantes (por ejemplo, confirmación de creación de nota)
+
+Navegador->Navegador: Actualiza la SPA en función de la respuesta del servidor
+
+# 06 - NEW NOTE ✅
+Usuario->Navegador: Ingresa a https://studies.cs.helsinki.fi/exampleapp/spa
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Servidor->Navegador: HTML-code (Página de la SPA)
+
+Navegador->Navegador: Descarga el archivo JavaScript principal (main.js) de la SPA
+Navegador->Navegador: Descarga el archivo de estilo CSS principal (main.css) de la SPA
+
+Navegador->Navegador: Carga y ejecuta el archivo JavaScript (main.js)
+Navegador->Navegador: Maneja las rutas de la SPA
+
+Usuario->Navegador: Interactúa con la SPA (por ejemplo, crea una nueva nota)
+
+Navegador->Navegador: Captura la interacción del usuario
+Navegador->Navegador: Abre el formulario de creación de notas
+
+Usuario->Navegador: Escribe el contenido de la nueva nota en el formulario
+
+Navegador->Navegador: Captura el contenido de la nota del formulario
+
+Navegador->Servidor: Realiza una solicitud AJAX para crear una nueva nota
+Navegador->Servidor: HTTP POST https://studies.cs.helsinki.fi/exampleapp/spa/new_note
+Navegador->Servidor: Datos de la nueva nota en el cuerpo de la solicitud
+
+Servidor->Servidor: Procesa la solicitud POST
+Servidor->Servidor: Almacena la nueva nota en la base de datos
+
+Servidor->Navegador: Respuesta al POST (puede ser un mensaje de éxito)
+
+Navegador->Navegador: Actualiza la vista de la SPA con la nueva nota
+
